@@ -109,8 +109,6 @@
     if ([viewController conformsToProtocol:@protocol(JPTransitionViewController)]) {
         UIViewController<JPTransitionViewController> *vc = (UIViewController<JPTransitionViewController> *)viewController;
         vc.transitionController = self;
-        
-        NSLog(@"vc = %@, tc = %@", vc, vc.transitionController);
     }
     
     [self addChildViewController:viewController];
