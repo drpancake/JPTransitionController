@@ -148,8 +148,8 @@
         } completion:^(BOOL finished) {
             [coverView removeFromSuperview];
             
-            if ([viewController conformsToProtocol:@protocol(JPTransitionViewController)]) {
-                UIViewController<JPTransitionViewController> *vc = (UIViewController<JPTransitionViewController> *)viewController;
+            if ([_visibleViewController conformsToProtocol:@protocol(JPTransitionViewController)]) {
+                UIViewController<JPTransitionViewController> *vc = (UIViewController<JPTransitionViewController> *)_visibleViewController;
                 vc.transitionController = nil;
             }
             
